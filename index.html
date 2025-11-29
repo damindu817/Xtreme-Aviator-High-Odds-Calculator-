@@ -1,1 +1,3723 @@
-DOUBLE BET STRATEGY
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>XTREME AVIATOR HIGH ODD SIGNAL GENERATOR PRO</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* All the existing CSS styles remain the same */
+    /* Disable text selection */
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100vh;
+      background: linear-gradient(135deg, #0a0e17, #121827);
+      color: #f8f9fa;
+      line-height: 1.6;
+      touch-action: manipulation;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    /* Allow selection only in input fields */
+    input, textarea {
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+    }
+
+    :root {
+      --primary: #3a86ff;
+      --primary-dark: #2667cc;
+      --secondary: #8338ec;
+      --danger: #ff006e;
+      --success: #06d6a0;
+      --warning: #ffbe0b;
+      --dark-1: #0a0e17;
+      --dark-2: #121827;
+      --dark-3: #1e2538;
+      --light-1: #f8f9fa;
+      --light-2: #e9ecef;
+      --accent: #3a86ff;
+      --extreme: #ff00ff;
+      --nav-height: 60px;
+      --header-height: 60px;
+      --whatsapp: #25D366;
+      --telegram: #0088cc;
+      --youtube: #FF0000;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Hide scrollbars but keep scrolling */
+    ::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      background: transparent;
+    }
+    * {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    
+    /* App container structure */
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      position: relative;
+    }
+    
+    /* Header with refined styling */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-height);
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      padding: 10px 20px;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    .header h1 {
+      font-weight: 800;
+      font-size: 1.2rem;
+      line-height: 1.2;
+      text-align: left;
+      color: white;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+    .header-settings {
+      font-size: 1.2rem;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    
+    .header-settings:hover {
+      transform: rotate(30deg);
+    }
+    
+    /* Settings Panel with refined styling */
+    .settings-panel {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 300px;
+      height: 100%;
+      background: var(--dark-2);
+      z-index: 1000;
+      transition: right 0.3s ease-out;
+      padding: 20px;
+      box-shadow: -5px 0 25px rgba(0,0,0,0.3);
+      border-left: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .settings-panel.show {
+      right: 0;
+    }
+    
+    .settings-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .settings-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--light-1);
+    }
+    
+    .close-settings {
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--light-2);
+      transition: transform 0.2s ease;
+    }
+    
+    .close-settings:hover {
+      transform: scale(1.1);
+      color: var(--danger);
+    }
+    
+    .settings-group {
+      margin-bottom: 25px;
+    }
+    
+    .settings-group-title {
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+      color: var(--light-2);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+    
+    .language-options {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    
+    .language-option {
+      padding: 10px 18px;
+      border-radius: 8px;
+      background: var(--dark-3);
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .language-option.active {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .settings-footer {
+      margin-top: auto;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.7rem;
+      color: var(--light-2);
+      text-align: center;
+      opacity: 0.7;
+    }
+    
+    /* Scrollable content area */
+    .scroll-container {
+      position: fixed;
+      top: var(--header-height);
+      bottom: var(--nav-height);
+      left: 0;
+      right: 0;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 15px;
+    }
+    
+    /* Main content container with refined styling */
+    .main-container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--dark-2);
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      z-index: 1;
+    }
+    
+    .datetime {
+      display: flex;
+      justify-content: space-between;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 12px 20px;
+      font-size: 0.9rem;
+    }
+    
+    .content {
+      padding: 20px;
+    }
+    
+    /* Navigation bar with refined styling */
+    .nav-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-height);
+      background: var(--dark-2);
+      display: flex;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 100;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .nav-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--light-2);
+      text-decoration: none;
+      font-size: 0.7rem;
+      transition: all 0.3s ease;
+      position: relative;
+      border-radius: 0;
+    }
+    
+    .nav-item i {
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-item.active {
+      color: var(--primary);
+      background: rgba(58, 134, 255, 0.1);
+    }
+    
+    .nav-item.active i {
+      transform: translateY(-3px);
+    }
+    
+    .nav-item:hover {
+      background: var(--dark-3);
+    }
+    
+    /* Notification badge */
+    .notification-badge {
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      background: var(--danger);
+      color: white;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      font-weight: bold;
+      pointer-events: none;
+      box-shadow: 0 2px 5px rgba(255, 0, 110, 0.3);
+    }
+    
+    /* Tab Content */
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* High Odd Input Section */
+    .high-odd-input-group {
+      margin-bottom: 25px;
+      position: relative;
+    }
+    
+    .high-odd-input-group label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--light-2);
+    }
+    
+    .input-row {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .input-field {
+      flex: 1;
+      position: relative;
+    }
+    
+    .input-field input {
+      width: 100%;
+      padding: 15px 18px;
+      background: var(--dark-3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      color: var(--light-1);
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .input-field input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2), inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .clear-inputs-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      color: var(--danger);
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+      padding: 5px;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .clear-inputs-btn:hover {
+      background: rgba(255, 0, 110, 0.1);
+    }
+    
+    /* Logic Selection - UPDATED: 2 buttons in first row, 2 buttons in second row */
+    .logic-selection {
+      margin: 25px 0;
+    }
+    
+    .logic-selection label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--light-2);
+    }
+    
+    .logic-options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    
+    .logic-option {
+      padding: 12px 8px;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--dark-3);
+      color: var(--light-1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-top: 3px solid var(--primary);
+      min-height: 70px;
+    }
+    
+    .logic-option:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .logic-option.active {
+      background: rgba(58, 134, 255, 0.2);
+      border-top: 3px solid var(--primary);
+    }
+    
+    .logic-option span:first-child {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+      z-index: 2;
+    }
+    
+    .logic-option span:last-child {
+      font-size: 0.75rem;
+      opacity: 0.8;
+      z-index: 2;
+      text-align: center;
+      line-height: 1.2;
+    }
+    
+    /* Signal Times Display */
+    .signal-times {
+      background: var(--dark-3);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 25px;
+      border-left: 4px solid var(--primary);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .signal-time-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .signal-time-item:last-child {
+      border-bottom: none;
+    }
+    
+    .signal-time-item .label {
+      color: var(--light-2);
+      font-weight: 500;
+    }
+    
+    .signal-time-item .value {
+      font-weight: 600;
+    }
+    
+    .stats-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin: 25px 0;
+    }
+    
+    .stat-card {
+      background: var(--dark-3);
+      border-radius: 10px;
+      padding: 18px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .stat-card h4 {
+      font-size: 0.9rem;
+      color: var(--light-2);
+      margin-bottom: 10px;
+    }
+    
+    .stat-card .value {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    
+    .stat-card.success .value {
+      color: var(--success);
+    }
+    
+    .stat-card.warning .value {
+      color: var(--warning);
+    }
+    
+    .stat-card.danger .value {
+      color: var(--danger);
+    }
+    
+    .stat-card.extreme .value {
+      color: var(--extreme);
+    }
+    
+    .results {
+      background: var(--dark-3);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 25px;
+      border-left: 4px solid var(--primary);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .result-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .result-item:last-child {
+      border-bottom: none;
+    }
+    
+    .result-item .label {
+      color: var(--light-2);
+      font-weight: 500;
+    }
+    
+    .result-item .value {
+      font-weight: 600;
+    }
+    
+    /* Countdown Styles - Updated with requested colors */
+    .countdown {
+      background: rgba(6, 214, 160, 0.1);
+      border-left: 4px solid var(--success);
+      padding: 15px;
+      border-radius: 10px;
+      margin: 25px 0;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .countdown.warning {
+      background: rgba(255, 190, 11, 0.1);
+      border-left: 4px solid var(--warning);
+    }
+    
+    .countdown.danger {
+      background: rgba(255, 0, 110, 0.1);
+      border-left: 4px solid var(--danger);
+    }
+    
+    .countdown.extreme {
+      background: rgba(255, 0, 255, 0.1);
+      border-left: 4px solid var(--extreme);
+    }
+    
+    .copy-result-btn {
+      background: rgba(58, 134, 255, 0.2);
+      color: var(--primary);
+      border: none;
+      border-radius: 10px;
+      padding: 12px 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 15px;
+      width: 100%;
+      font-size: 0.9rem;
+    }
+    
+    .copy-result-btn:hover {
+      background: rgba(58, 134, 255, 0.3);
+    }
+    
+    .copy-result-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    /* History Tab with refined styling */
+    .history-tab {
+      padding: 15px;
+    }
+    
+    .history-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .history-header h3 {
+      font-weight: 500;
+      color: var(--light-1);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .history-clear-btn {
+      background: transparent;
+      color: var(--danger);
+      border: 1px solid var(--danger);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .history-clear-btn:hover {
+      background: rgba(255, 0, 110, 0.1);
+    }
+    
+    .history-list {
+      background: var(--dark-3);
+      border-radius: 12px;
+      overflow: hidden;
+      max-height: calc(100vh - 250px);
+      overflow-y: auto;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 15px;
+    }
+    
+    .history-item {
+      padding: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      display: grid;
+      grid-template-columns: 1fr 1fr auto;
+      gap: 10px;
+      align-items: center;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    
+    .history-item.active {
+      background: rgba(6, 214, 160, 0.05);
+      border-left: 3px solid var(--success);
+    }
+    
+    .history-item.success {
+      background: rgba(6, 214, 160, 0.05);
+    }
+    
+    .history-item.failure {
+      background: rgba(255, 0, 110, 0.05);
+    }
+    
+    .history-item.extreme {
+      background: rgba(255, 0, 255, 0.05);
+    }
+    
+    .history-item:last-child {
+      border-bottom: none;
+    }
+    
+    .history-time {
+      font-size: 0.9rem;
+      color: var(--light-2);
+      display: flex;
+      align-items: center;
+      gap: 5px; /* icon සහ text අතර ඉඩ */
+    }
+    
+    .history-multiplier {
+      font-weight: 600;
+      text-align: center;
+    }
+    
+    .history-multiplier span {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+    }
+    
+    .history-multiplier-2 span { background: rgba(6, 214, 160, 0.2); color: var(--success); }
+    .history-multiplier-3 span { background: rgba(255, 190, 11, 0.2); color: var(--warning); }
+    .history-multiplier-4 span { background: rgba(255, 158, 0, 0.2); color: #ff9e00; }
+    .history-multiplier-7 span { background: rgba(131, 56, 236, 0.2); color: var(--secondary); }
+    .history-multiplier-10 span { background: rgba(255, 0, 110, 0.2); color: var(--danger); }
+    .history-multiplier-100 span { background: rgba(255, 0, 255, 0.2); color: var(--extreme); }
+    
+    .history-details {
+      text-align: left;
+      font-size: 0.85rem;
+    }
+    
+    .history-details span {
+      display: block;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .copy-btn {
+      background: rgba(58, 134, 255, 0.2);
+      color: var(--primary);
+      border: none;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-left: 10px;
+    }
+    
+    .copy-btn:hover {
+      background: rgba(58, 134, 255, 0.3);
+    }
+
+    /* Notification Tab with refined styling */
+    .notification-tab {
+      padding: 15px;
+    }
+    
+    .notification-item {
+      background: var(--dark-3);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 15px;
+      border-left: 4px solid var(--primary);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      animation: fadeIn 0.3s forwards;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .notification-title {
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--light-1);
+    }
+    
+    .notification-time {
+      font-size: 0.8rem;
+      color: var(--light-2);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .notification-message {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: var(--light-2);
+    }
+    
+    /* Notification type colors */
+    .notification-algorithm_update {
+      border-left-color: var(--primary);
+    }
+    
+    .notification-algorithm_update .notification-title i {
+      color: var(--primary);
+    }
+    
+    .notification-bug_fix {
+      border-left-color: var(--danger);
+    }
+    
+    .notification-bug_fix .notification-title i {
+      color: var(--danger);
+    }
+    
+    .notification-general {
+      border-left-color: var(--warning);
+    }
+    
+    .notification-general .notification-title i {
+      color: var(--warning);
+    }
+    
+    /* Support Tab with refined styling */
+    .support-tab {
+      padding: 15px;
+    }
+    
+    .support-card, .community-card, .help-guides-card {
+      background: var(--dark-3);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .support-card h3, .community-card h3, .help-guides-card h3 {
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--light-1);
+    }
+    
+    .support-btn, .community-btn, .help-guides-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      border: none;
+      outline: none;
+    }
+    
+    .support-btn i, .community-btn i, .help-guides-btn i {
+      font-size: 1.2rem;
+    }
+    
+    /* WhatsApp support button */
+    .support-btn.whatsapp, .community-btn.whatsapp {
+      background: rgba(37, 211, 102, 0.2);
+      color: var(--whatsapp);
+    }
+    
+    .support-btn.whatsapp:hover, .community-btn.whatsapp:hover {
+      background: rgba(37, 211, 102, 0.3);
+    }
+    
+    /* Telegram support button */
+    .support-btn.telegram, .community-btn.telegram {
+      background: rgba(0, 136, 204, 0.2);
+      color: var(--telegram);
+    }
+    
+    .support-btn.telegram:hover, .community-btn.telegram:hover {
+      background: rgba(0, 136, 204, 0.3);
+    }
+    
+    /* YouTube button */
+    .community-btn.youtube {
+      background: rgba(255, 0, 0, 0.2);
+      color: var(--youtube);
+    }
+    
+    .community-btn.youtube:hover {
+      background: rgba(255, 0, 0, 0.3);
+    }
+    
+    /* Guide button */
+    .help-guides-btn.guide {
+      background: rgba(255, 190, 11, 0.2);
+      color: var(--warning);
+    }
+    
+    .help-guides-btn.guide:hover {
+      background: rgba(255, 190, 11, 0.3);
+    }
+    
+    /* Disclaimer button */
+    .help-guides-btn.disclaimer {
+      background: rgba(255, 0, 110, 0.2);
+      color: var(--danger);
+    }
+    
+    .help-guides-btn.disclaimer:hover {
+      background: rgba(255, 0, 110, 0.3);
+    }
+    
+    /* Tooltip */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      margin-left: 5px;
+    }
+    
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      background-color: var(--dark-1);
+      color: var(--light-1);
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 5px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      font-size: 0.8rem;
+      border: 1px solid var(--dark-3);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    /* Actual multiplier display */
+    .actual-multiplier {
+      margin-left: 8px;
+      font-size: 0.8em;
+    }
+    
+    .actual-multiplier-2 { color: var(--success); }
+    .actual-multiplier-3 { color: var(--warning); }
+    .actual-multiplier-4 { color: #ff9e00; }
+    .actual-multiplier-7 { color: var(--secondary); }
+    .actual-multiplier-10 { color: var(--danger); }
+    .actual-multiplier-100 { color: var(--extreme); }
+
+    /* Updated Disclaimer Badge Animation */
+    .disclaimer-badge {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: linear-gradient(145deg, rgba(255, 0, 110, 0.3), rgba(255, 0, 110, 0.4));
+      color: var(--danger);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 999;
+      box-shadow: 0 5px 20px rgba(255, 0, 110, 0.3);
+      transition: all 0.3s ease;
+      font-size: 1.2rem;
+      animation: pulseDanger 2s infinite;
+    }
+
+    @keyframes pulseDanger {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 110, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(255, 0, 110, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 110, 0);
+      }
+    }
+
+    .disclaimer-badge:hover {
+      background: linear-gradient(145deg, rgba(255, 0, 110, 0.4), rgba(255, 0, 110, 0.5));
+      transform: scale(1.1);
+      animation: pulseDangerHover 1.5s infinite;
+    }
+
+    @keyframes pulseDangerHover {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 110, 0.6), 
+                    0 0 0 10px rgba(255, 0, 110, 0.4),
+                    0 0 0 20px rgba(255, 0, 110, 0.2);
+      }
+      100% {
+        box-shadow: 0 0 0 10px rgba(255, 0, 110, 0), 
+                    0 0 0 20px rgba(255, 0, 110, 0),
+                    0 0 0 30px rgba(255, 0, 110, 0);
+      }
+    }
+
+    /* Disclaimer popup */
+    .disclaimer-popup {
+      position: fixed;
+      bottom: 85px;
+      right: 25px;
+      width: 300px;
+      max-width: 90%;
+      background: var(--dark-2);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border-left: 4px solid var(--danger);
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 998;
+      pointer-events: none;
+    }
+
+    .disclaimer-popup.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .disclaimer-popup h4 {
+      color: var(--danger);
+      margin-bottom: 12px;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .disclaimer-popup p {
+      font-size: 0.8rem;
+      line-height: 1.5;
+      color: var(--light-2);
+      margin-bottom: 12px;
+    }
+
+    .disclaimer-popup a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+
+    .disclaimer-popup a:hover {
+      text-decoration: underline;
+    }
+
+    /* Tips Badge - Position updated */
+    .tips-badge {
+      position: fixed;
+      bottom: 280px;
+      right: 25px;
+      background: linear-gradient(145deg, rgba(255, 190, 11, 0.3), rgba(255, 190, 11, 0.4));
+      color: var(--warning);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 997;
+      box-shadow: 0 5px 20px rgba(255, 190, 11, 0.3);
+      transition: all 0.3s ease;
+      font-size: 1.2rem;
+      animation: pulseWarning 2s infinite;
+    }
+    
+    /* Animation for light bulb badge */
+    @keyframes pulseWarning {
+      0% { box-shadow: 0 0 0 0 rgba(255, 190, 11, 0.4); }
+      70% { box-shadow: 0 0 0 15px rgba(255, 190, 11, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 190, 11, 0); }
+    }
+    
+    /* Hover effects for light bulb */
+    .tips-badge:hover {
+      background: linear-gradient(145deg, rgba(255, 190, 11, 0.4), rgba(255, 190, 11, 0.5));
+      transform: scale(1.1);
+      animation: pulseWarningHover 1.5s infinite;
+    }
+    
+    @keyframes pulseWarningHover {
+      0% { box-shadow: 0 0 0 0 rgba(255, 190, 11, 0.6), 
+                    0 0 0 10px rgba(255, 190, 11, 0.4),
+                    0 0 0 20px rgba(255, 190, 11, 0.2); }
+      100% { box-shadow: 0 0 0 10px rgba(255, 190, 11, 0), 
+                      0 0 0 20px rgba(255, 190, 11, 0),
+                      0 0 0 30px rgba(255, 190, 11, 0); }
+    }
+    
+    /* Tips popup styles */
+    .tips-popup {
+      position: fixed;
+      bottom: 340px;
+      right: 25px;
+      width: 300px;
+      max-width: 90%;
+      background: var(--dark-2);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border-left: 4px solid var(--warning);
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 996;
+      pointer-events: none;
+    }
+    
+    .tips-popup.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+    
+    .tips-popup h4 {
+      color: var(--warning);
+      margin-bottom: 12px;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .tips-popup p {
+      font-size: 0.8rem;
+      line-height: 1.5;
+      color: var(--light-2);
+      margin-bottom: 12px;
+    }
+    
+    .tips-popup ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    
+    .tips-popup li {
+      margin-bottom: 6px;
+      font-size: 0.8rem;
+      color: var(--light-2);
+    }
+    
+    .tips-popup a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    
+    .tips-popup a:hover {
+      text-decoration: underline;
+    }
+
+    /* Custom Dialog Styles */
+    .dialog-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .dialog-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .dialog-box {
+      background: var(--dark-2);
+      border-radius: 12px;
+      padding: 25px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .dialog-overlay.active .dialog-box {
+      transform: translateY(0);
+    }
+
+    .dialog-title {
+      font-size: 1.2rem;
+      margin-bottom: 18px;
+      color: var(--light-1);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dialog-message {
+      margin-bottom: 20px;
+      color: var(--light-2);
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
+
+    .dialog-buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    .dialog-btn {
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 0.9rem;
+    }
+
+    .dialog-btn-cancel {
+      background: var(--dark-3);
+      color: var(--light-1);
+      border: 1px solid var(--dark-3);
+    }
+
+    .dialog-btn-cancel:hover {
+      background: var(--dark-1);
+    }
+
+    .dialog-btn-confirm {
+      background: var(--danger);
+      color: white;
+      border: 1px solid var(--danger);
+    }
+
+    .dialog-btn-confirm:hover {
+      background: #e00064;
+    }
+
+    .dialog-icon {
+      font-size: 1.5rem;
+      color: var(--danger);
+    }
+    
+    /* Animation for active signal */
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(6, 214, 160, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(6, 214, 160, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(6, 214, 160, 0); }
+    }
+    
+    .active-signal {
+      animation: pulse 2s infinite;
+    }
+
+    /* Premium Signal Popup Styles */
+    .signal-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1001;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease-out;
+    }
+    
+    .signal-container.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    
+    .signal-card {
+      width: 95%;
+      max-width: 380px;
+      background: linear-gradient(145deg, #1e293b, #0f172a);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      transform: translateY(20px) scale(0.98);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+    }
+    
+    .signal-container.active .signal-card {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    
+    /* Header Section */
+    .signal-header {
+      padding: 18px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .signal-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transform: translateY(3px);
+      color: white;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+    .signal-title i {
+      color: white;
+      font-size: 1.1em;
+    }
+    
+    .close-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.2);
+      border: none;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      transform: translateY(3px);
+    }
+    
+    .close-btn:hover {
+      background: var(--danger);
+      transform: translateY(3px) rotate(90deg);
+    }
+    
+    /* Signal Meta Section */
+    .signal-meta {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 18px 0;
+    }
+    
+    .meta-item {
+      text-align: center;
+      flex: 1;
+    }
+    
+    .meta-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.7;
+      margin-bottom: 6px;
+      color: var(--light-2);
+    }
+    
+    .meta-value {
+      font-size: 1.2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      color: var(--light-1);
+    }
+    
+    .meta-value.time {
+      color: var(--warning);
+    }
+    
+    .meta-value.odd {
+      color: var(--success);
+      font-size: 1.6rem;
+    }
+    
+    /* Countdown Section */
+    .countdown-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 15px 0;
+    }
+    
+    .countdown-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border: 3px solid var(--danger);
+      box-shadow: 0 0 15px rgba(255, 32, 110, 0.3);
+      margin-bottom: 8px;
+    }
+    
+    .countdown-circle::before {
+      content: '';
+      position: absolute;
+      width: calc(100% + 8px);
+      height: calc(100% + 8px);
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: var(--primary);
+      animation: spin 2s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    #countdown-timer {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--danger);
+      line-height: 1;
+      z-index: 1;
+    }
+    
+    .countdown-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--danger);
+      margin-top: 4px;
+    }
+    
+    /* Strategy Section */
+    .strategy-section {
+      background: rgba(6, 214, 160, 0.05);
+      border-top: 1px solid rgba(6, 214, 160, 0.1);
+      border-bottom: 1px solid rgba(6, 214, 160, 0.1);
+      margin: 15px 0;
+      padding: 18px;
+      position: relative;
+    }
+    
+    .strategy-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--success);
+    }
+    
+    .strategy-title i {
+      color: var(--success);
+    }
+    
+    .strategy-steps {
+      display: grid;
+      gap: 12px;
+    }
+    
+    .strategy-step {
+      display: flex;
+      gap: 10px;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: var(--light-2);
+    }
+    
+    .step-number {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(6, 214, 160, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--success);
+    }
+    
+    .highlight {
+      font-weight: 700;
+      color: var(--warning);
+    }
+    
+    /* Signal Footer Section */
+    .signal-footer {
+      padding: 8px 18px 12px;
+      text-align: center;
+      font-size: 0.65rem;
+      color: var(--light-2);
+      opacity: 0.8;
+      line-height: 1.3;
+    }
+    
+    /* RISK SIGNAL Popup Styles */
+    .risk-signal-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1001;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease-out;
+    }
+    
+    .risk-signal-container.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    
+    .risk-signal-card {
+      width: 95%;
+      max-width: 380px;
+      background: linear-gradient(145deg, #1e293b, #0f172a);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      transform: translateY(20px) scale(0.98);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2);
+    }
+    
+    .risk-signal-container.active .risk-signal-card {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    
+    /* Header Section - Modified for RISK SIGNAL */
+    .risk-signal-header {
+      padding: 18px;
+      background: var(--danger);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .risk-signal-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transform: translateY(3px);
+      color: white;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+    .risk-signal-title i {
+      color: white;
+      font-size: 1.1em;
+    }
+    
+    .risk-close-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.2);
+      border: none;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      transform: translateY(3px);
+    }
+    
+    .risk-close-btn:hover {
+      background: rgba(0, 0, 0, 0.4);
+      transform: translateY(3px) rotate(90deg);
+    }
+    
+    /* Signal Meta Section */
+    .risk-signal-meta {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 18px 0;
+    }
+    
+    .risk-meta-item {
+      text-align: center;
+      flex: 1;
+    }
+    
+    .risk-meta-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.7;
+      margin-bottom: 6px;
+      color: var(--light-2);
+    }
+    
+    .risk-meta-value {
+      font-size: 1.2rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      color: var(--light-1);
+    }
+    
+    .risk-meta-value.time {
+      color: var(--warning);
+    }
+    
+    .risk-meta-value.odd {
+      color: var(--danger);
+      font-size: 1.6rem;
+    }
+    
+    /* Countdown Section */
+    .risk-countdown-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 15px 0;
+    }
+    
+    .risk-countdown-circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border: 3px solid var(--danger);
+      box-shadow: 0 0 15px rgba(255, 32, 110, 0.3);
+      margin-bottom: 8px;
+    }
+    
+    .risk-countdown-circle::before {
+      content: '';
+      position: absolute;
+      width: calc(100% + 8px);
+      height: calc(100% + 8px);
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: var(--primary);
+      animation: spin 2s linear infinite;
+    }
+    
+    #risk-countdown-timer {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--danger);
+      line-height: 1;
+      z-index: 1;
+    }
+    
+    .risk-countdown-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--danger);
+      margin-top: 4px;
+    }
+    
+    /* Strategy Section */
+    .risk-strategy-section {
+      background: rgba(255, 0, 110, 0.05);
+      border-top: 1px solid rgba(255, 0, 110, 0.1);
+      border-bottom: 1px solid rgba(255, 0, 110, 0.1);
+      margin: 15px 0;
+      padding: 18px;
+      position: relative;
+    }
+    
+    .risk-strategy-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--danger);
+    }
+    
+    .risk-strategy-title i {
+      color: var(--danger);
+    }
+    
+    .risk-strategy-steps {
+      display: grid;
+      gap: 12px;
+    }
+    
+    .risk-strategy-step {
+      display: flex;
+      gap: 10px;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: var(--light-2);
+    }
+    
+    .risk-step-number {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(255, 0, 110, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--danger);
+    }
+    
+    .risk-highlight {
+      font-weight: 700;
+      color: var(--warning);
+    }
+    
+    /* Risk Signal Footer Section */
+    .risk-signal-footer {
+      padding: 8px 18px 12px;
+      text-align: center;
+      font-size: 0.65rem;
+      color: var(--light-2);
+      opacity: 0.8;
+      line-height: 1.3;
+    }
+    
+    /* Offline Page Styles */
+    .offline-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--dark-1);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .offline-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .offline-container {
+      width: 100%;
+      max-width: 500px;
+      background: var(--dark-2);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 0, 110, 0.3);
+      transform: scale(0.9);
+      opacity: 0;
+      animation: fadeIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .offline-icon {
+      font-size: 80px;
+      color: var(--danger);
+      margin-bottom: 20px;
+    }
+    
+    .offline-title {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: var(--danger);
+      font-weight: 600;
+    }
+    
+    .offline-message {
+      color: var(--light-2);
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    
+    .retry-btn {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .retry-btn::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to bottom right,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0.1) 45%,
+        rgba(255,255,255,0.15) 50%,
+        rgba(255,255,255,0.1) 55%,
+        rgba(255,255,255,0) 100%
+      );
+      transform: rotate(30deg);
+      animation: shine 3s infinite;
+    }
+    
+    @keyframes shine {
+      0% { transform: translateX(-100%) rotate(30deg); }
+      100% { transform: translateX(100%) rotate(30deg); }
+    }
+    
+    .retry-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(58, 134, 255, 0.4);
+    }
+    
+    .retry-btn:active {
+      transform: translateY(0);
+    }
+    
+    .connection-animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0.1;
+    }
+    
+    .connection-animation div {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--primary);
+      filter: blur(5px);
+      animation: float 15s infinite linear;
+    }
+    
+    @keyframes float {
+      0% { transform: translate(0, 0) scale(1); opacity: 0; }
+      50% { opacity: 0.3; }
+      100% { transform: translate(random(200) - 100px, random(200) - 100px) scale(0); opacity: 0; }
+    }
+
+    /* New style for failed signal message */
+    .failed-signal-message {
+      color: var(--danger) !important;
+      font-weight: bold;
+    }
+
+    /* Auto Selection Panel Styles */
+    .auto-selection-panel {
+      background: var(--dark-3);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 25px 0;
+      border-left: 4px solid var(--primary);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .auto-selection-header {
+      display: flex;
+      justify-content: between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .auto-selection-title {
+      font-weight: 600;
+      color: var(--light-1);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .auto-select-btn {
+      background: rgba(6, 214, 160, 0.2);
+      color: var(--success);
+      border: none;
+      border-radius: 10px;
+      padding: 12px 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      font-size: 0.9rem;
+    }
+    
+    .auto-select-btn:hover {
+      background: rgba(6, 214, 160, 0.3);
+    }
+    
+    .auto-select-btn i {
+      font-size: 1.1rem;
+    }
+    
+    .auto-selection-result {
+      margin-top: 15px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      display: none;
+    }
+    
+    .auto-selection-result.active {
+      display: block;
+      animation: fadeIn 0.3s ease-out;
+    }
+    
+    .auto-selection-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    
+    .auto-selection-detail {
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .auto-selection-detail i {
+      font-size: 1rem;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .odd-buttons {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      .history-item {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .history-details {
+        grid-column: span 2;
+        text-align: left;
+        margin-top: 8px;
+      }
+
+      .copy-btn {
+        position: static;
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+      }
+      
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+      
+      /* Adjust signal popups for tablet */
+      .signal-card, .risk-signal-card {
+        max-width: 350px;
+      }
+      
+      .auto-selection-details {
+        grid-template-columns: 1fr;
+      }
+      
+      .logic-options {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .input-row {
+        flex-direction: column;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 1.2rem;
+      }
+      
+      .content {
+        padding: 15px 10px;
+      }
+      
+      .odd-buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .nav-item span {
+        display: none;
+      }
+      
+      .nav-item i {
+        font-size: 1.4rem;
+        margin-bottom: 0;
+      }
+      
+      /* Adjust badge positions for mobile */
+      .tips-badge {
+        bottom: 200px;
+        right: 15px;
+      }
+      
+      .disclaimer-badge {
+        bottom: 80px;
+        right: 15px;
+      }
+      
+      .tips-popup {
+        bottom: 260px;
+        right: 15px;
+        width: calc(100% - 30px);
+      }
+      
+      .disclaimer-popup {
+        bottom: 140px;
+        right: 15px;
+        width: calc(100% - 30px);
+      }
+      
+      /* Adjust signal popups for mobile */
+      .signal-card, .risk-signal-card {
+        width: calc(100% - 30px);
+        max-width: none;
+      }
+      
+      .signal-header, .risk-signal-header {
+        padding: 15px;
+      }
+      
+      .signal-title, .risk-signal-title {
+        font-size: 1.1rem;
+      }
+      
+      .close-btn, .risk-close-btn {
+        width: 28px;
+        height: 28px;
+      }
+      
+      .countdown-circle, .risk-countdown-circle {
+        width: 90px;
+        height: 90px;
+      }
+      
+      #countdown-timer, #risk-countdown-timer {
+        font-size: 1.6rem;
+      }
+      
+      .strategy-section, .risk-strategy-section {
+        padding: 15px;
+      }
+      
+      .strategy-step, .risk-strategy-step {
+        font-size: 0.8rem;
+      }
+      
+      .signal-footer, .risk-signal-footer {
+        padding: 8px 15px 10px;
+        font-size: 0.6rem;
+      }
+      
+      /* Adjust logic buttons for mobile */
+      .logic-option {
+        padding: 10px 6px;
+        min-height: 65px;
+      }
+      
+      .logic-option span:first-child {
+        font-size: 0.9rem;
+      }
+      
+      .logic-option span:last-child {
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Offline Overlay -->
+  <div class="offline-overlay" id="offlineOverlay">
+    <div class="connection-animation" id="connectionAnimation"></div>
+    
+    <div class="offline-container">
+      <div class="offline-icon">
+        <i class="fas fa-unlink"></i>
+      </div>
+      <h1 class="offline-title">CONNECTION LOST</h1>
+      <p class="offline-message">XTREME AVIATOR predictor requires stable internet connection for real-time predictions. Please check your network and try again.</p>
+      <button class="retry-btn" id="retryBtn">
+        <i class="fas fa-sync-alt"></i> RETRY CONNECTION
+      </button>
+    </div>
+  </div>
+
+  <!-- Settings Panel -->
+  <div class="settings-panel" id="settingsPanel">
+    <div class="settings-header">
+      <div class="settings-title">Settings</div>
+      <div class="close-settings" onclick="hideSettings()">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+    
+    <div class="settings-group">
+      <div class="settings-group-title">Language</div>
+      <div class="language-options">
+        <div class="language-option active" onclick="setLanguage('en')">
+          English
+        </div>
+        <div class="language-option" onclick="setLanguage('si')">
+          සිංහල
+        </div>
+      </div>
+    </div>
+    
+    <div class="settings-footer">
+      © 2025 XTREME PREDICTOR TECHNOLOGIES | ALL RIGHTS RESERVED
+    </div>
+  </div>
+
+  <!-- App Structure -->
+  <div class="app-container">
+    <!-- Fixed Header -->
+    <div class="header">
+      <h1>XTREME AVIATOR HIGH ODD SIGNAL</h1>
+      <div class="header-settings" onclick="showSettings()">
+        <i class="fas fa-cog"></i>
+      </div>
+    </div>
+    
+    <!-- Scrollable Content Area -->
+    <div class="scroll-container">
+      <!-- Main Content Container -->
+      <div class="main-container">
+        <div class="datetime">
+          <div id="current-date">Loading...</div>
+          <div id="current-time">--:--:--</div>
+        </div>
+        
+        <div class="content">
+          <!-- Predictor Tab -->
+          <div class="tab-content active" id="predictorTab">
+            <!-- High Odd Input Section -->
+            <div class="high-odd-input-group">
+              <label for="highOddInput">Enter High Odd (Above 10×) <span class="tooltip"><i class="fas fa-info-circle"></i><span class="tooltiptext">Enter a high odd value above 10× (e.g., 33.41×)</span></span></label>
+              <div class="input-row">
+                <div class="input-field">
+                  <input type="number" id="highOddInput" placeholder="e.g., 33.41" autocomplete="off" autocorrect="off" spellcheck="false" inputmode="decimal">
+                  <button class="clear-inputs-btn" onclick="clearInput('highOddInput')">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <div class="input-field">
+                  <input type="text" id="timeInput" placeholder="Time (e.g., 23:44:32)" autocomplete="off" autocorrect="off" spellcheck="false" inputmode="numeric">
+                  <button class="clear-inputs-btn" onclick="clearInput('timeInput')">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Logic Selection - UPDATED: 2 buttons in first row, 2 buttons in second row -->
+            <div class="logic-selection">
+              <label>Select Analysis Logic</label>
+              <div class="logic-options">
+                <button class="logic-option active" onclick="selectLogic(1)">
+                  <span>Logic 1</span>
+                  <span>Decimal Addition</span>
+                </button>
+                <button class="logic-option" onclick="selectLogic(2)">
+                  <span>Logic 2</span>
+                  <span>Odd-Even Pattern</span>
+                </button>
+                <button class="logic-option" onclick="selectLogic(3)">
+                  <span>Logic 3</span>
+                  <span>Time Reversal</span>
+                </button>
+                <button class="logic-option" onclick="selectLogic(4)">
+                  <span>Logic 4</span>
+                  <span>Advanced Pattern</span>
+                </button>
+              </div>
+            </div>
+            
+            <!-- REMOVED: Double Bet Strategy Section -->
+            
+            <div class="stats-container">
+              <div class="stat-card">
+                <h4>Total Predictions</h4>
+                <div class="value" id="total-predictions">-</div>
+              </div>
+            </div>
+            
+            <div class="results" id="output" style="display: none;">
+              <div class="result-item">
+                <span class="label">High Odd:</span>
+                <span class="value" id="result-odd">-</span>
+              </div>
+              <div class="result-item">
+                <span class="label">Original Time:</span>
+                <span class="value" id="result-original-time">-</span>
+              </div>
+              <div class="result-item">
+                <span class="label">Confidence Level:</span>
+                <span class="value" id="result-confidence">-</span>
+              </div>
+              <div class="result-item">
+                <span class="label">Signal Window:</span>
+                <span class="value" id="result-window">-</span>
+              </div>
+              <button class="copy-result-btn" id="copyResultBtn" onclick="copyResultToClipboard(event)" disabled>
+                <i class="fas fa-copy"></i> Copy Signal
+              </button>
+            </div>
+            
+            <div class="countdown" id="countdown">No active signals. Generate a new signal.</div>
+          </div>
+          
+          <!-- History Tab -->
+          <div class="tab-content" id="historyTab">
+            <div class="history-tab">
+              <div class="history-header">
+                <h3><i class="fas fa-history"></i> Signal History</h3>
+                <button class="history-clear-btn" onclick="showClearDialog()">
+                  <i class="fas fa-trash-alt"></i> Clear
+                </button>
+              </div>
+              <div class="history-list" id="historyLog"></div>
+            </div>
+          </div>
+          
+          <!-- Notification Tab -->
+          <div class="tab-content" id="notificationTab">
+            <div class="notification-tab" id="notificationTabContent">
+              <!-- Dynamic content will be inserted here -->
+            </div>
+          </div>
+          
+          <!-- Support Tab -->
+          <div class="tab-content" id="supportTab">
+            <div class="support-tab">
+              <!-- New Community Section -->
+              <div class="community-card">
+                <h3><i class="fas fa-users"></i> Join Our Community</h3>
+                <button class="community-btn whatsapp" onclick="window.open('https://chat.whatsapp.com/BE39Aj6enbP3SNkfmn8DeG?mode=ac_t')">
+                  <i class="fab fa-whatsapp"></i> WhatsApp Group
+                </button>
+                <button class="community-btn telegram" onclick="window.open('https://t.me/xtremepredictor')">
+                  <i class="fab fa-telegram"></i> Telegram Group
+                </button>
+                <button class="community-btn youtube" onclick="window.open('https://youtube.com/@xtreme.predictor_pro?sub_confirmation=1')">
+                  <i class="fab fa-youtube"></i> YouTube Channel
+                </button>
+              </div>
+              
+              <!-- Help & Guides Section (formerly Resources) -->
+              <div class="help-guides-card">
+                <h3><i class="fas fa-question-circle"></i> Help & Guides</h3>
+                <button class="help-guides-btn guide" onclick="window.open('https://damindu817.github.io/Aviator-Sha512-Hash-Professional-Strategy-Guide/','_blank')">
+                  <i class="fas fa-book"></i> User Guide
+                </button>
+                <button class="help-guides-btn disclaimer" onclick="window.open('https://damindu817.github.io/DISCLAIMER-/','_blank')">
+                  <i class="fas fa-exclamation-triangle"></i> Disclaimer
+                </button>
+              </div>
+              
+              <div class="support-card">
+                <h3><i class="fas fa-headset"></i> Support</h3>
+                <button class="support-btn telegram" onclick="window.open('https://t.me/xtremepredictor25')">
+                  <i class="fab fa-telegram"></i> Telegram Support
+                </button>
+                <button class="support-btn whatsapp" onclick="window.open('https://wa.me/+94701661588')">
+                  <i class="fab fa-whatsapp"></i> WhatsApp Support
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Fixed Navigation Bar -->
+    <div class="nav-bar">
+      <a href="#" class="nav-item active" onclick="switchTab('predictorTab', this)">
+        <i class="fas fa-chart-line"></i>
+        <span>PREDICTOR</span>
+      </a>
+      <a href="#" class="nav-item" onclick="switchTab('historyTab', this)">
+        <i class="fas fa-history"></i>
+        <span>HISTORY</span>
+      </a>
+      <a href="#" class="nav-item" onclick="switchTab('notificationTab', this)" id="notificationNavItem">
+        <i class="fas fa-bell"></i>
+        <span>NOTIFICATION</span>
+        <div class="notification-badge" id="notificationBadge" style="display: none;"></div>
+      </a>
+      <a href="#" class="nav-item" onclick="switchTab('supportTab', this)">
+        <i class="fas fa-headset"></i>
+        <span>SUPPORT</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Tips Badge -->
+  <div class="tips-badge" id="tipsBadge">
+    <i class="fas fa-lightbulb"></i>
+  </div>
+
+  <!-- Tips Popup -->
+  <div class="tips-popup" id="tipsPopup">
+    <h4><i class="fas fa-lightbulb"></i> TIPS & TRICKS</h4>
+    <p>Here are some expert tips to improve your predictions:</p>
+    <ul>
+      <li>Use signals with confidence above 95%</li>
+      <li>Start with small bets to test the system</li>
+      <li>Combine multiple signals for better accuracy</li>
+      <li>Set auto-cashout slightly below target</li>
+      <li><strong>Always use DOUBLE BET strategy</strong> - one at 10×, one at 20×+</li>
+    </ul>
+    <a href="https://damindu817.github.io/Aviator-Sha512-Hash-Professional-Strategy-Guide/" target="_blank">Click here to view the full winning guide</a>
+  </div>
+
+  <!-- Disclaimer Badge -->
+  <div class="disclaimer-badge" id="disclaimerBadge" onclick="window.open('https://damindu817.github.io/DISCLAIMER-/','_blank')">
+    <i class="fas fa-exclamation-triangle"></i>
+  </div>
+
+  <!-- Disclaimer Popup -->
+  <div class="disclaimer-popup" id="disclaimerPopup">
+    <h4>DISCLAIMER!</h4>
+    <p>This tool provides analytical insights based on patterns and probability. Predictions are not guaranteed. Gambling involves risk. Only play with money you can afford to lose.</p>
+    <a href="https://damindu817.github.io/DISCLAIMER-/" target="_blank">Click icon for guide & creator contact</a>
+  </div>
+
+  <!-- Custom Dialogs -->
+  <div class="dialog-overlay" id="clearDialog">
+    <div class="dialog-box">
+      <div class="dialog-title">
+        <i class="fas fa-exclamation-triangle dialog-icon"></i>
+        <span>Confirm Clear History</span>
+      </div>
+      <div class="dialog-message">Are you sure you want to clear all prediction history? This cannot be undone.</div>
+      <div class="dialog-buttons">
+        <button class="dialog-btn dialog-btn-cancel" onclick="hideClearDialog()">Cancel</button>
+        <button class="dialog-btn dialog-btn-confirm" onclick="clearHistory()">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog-overlay" id="errorDialog">
+    <div class="dialog-box">
+      <div class="dialog-title">
+        <i class="fas fa-exclamation-circle dialog-icon"></i>
+        <span>Invalid Input</span>
+      </div>
+      <div class="dialog-message" id="errorMessage">Please enter a valid high odd and time.</div>
+      <div class="dialog-buttons">
+        <button class="dialog-btn dialog-btn-confirm" onclick="hideErrorDialog()">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog-overlay" id="successDialog">
+    <div class="dialog-box">
+      <div class="dialog-title">
+        <i class="fas fa-check-circle dialog-icon" style="color: var(--success);"></i>
+        <span>Signal Generated</span>
+      </div>
+      <div class="dialog-message" id="successMessage">Signal created successfully!</div>
+      <div class="dialog-buttons">
+        <button class="dialog-btn dialog-btn-confirm" onclick="hideSuccessDialog()" style="background: var(--success);">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Premium Signal Popup -->
+  <div class="signal-container" id="signalPopup">
+    <div class="signal-card">
+      <div class="signal-header">
+        <div class="signal-title">
+          <i class="fas fa-bell"></i> PREMIUM SIGNAL
+        </div>
+        <button class="close-btn" onclick="closeSignalPopup()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="signal-meta">
+        <div class="meta-item">
+          <div class="meta-label">Signal Time</div>
+          <div class="meta-value time" id="signal-time">-</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Target</div>
+          <div class="meta-value odd" id="signal-odd">-</div>
+        </div>
+      </div>
+      
+      <div class="countdown-section">
+        <div class="countdown-circle">
+          <div id="countdown-timer">20</div>
+        </div>
+        <div class="countdown-label">SECONDS REMAINING</div>
+      </div>
+      
+      <div class="strategy-section">
+        <div class="strategy-title">
+          <i class="fas fa-chart-line"></i> WINNING STRATEGY
+        </div>
+        
+        <div class="strategy-steps" id="strategy-steps">
+          <!-- Dynamic content will be inserted here -->
+        </div>
+      </div>
+      
+      <div class="signal-footer">
+        THIS SIGNAL IS GENERATED USING THE XTREME AVIATOR HIGH ODD SIGNAL GENERATOR PRO TOOL WITH AI-POWERED ACCURACY
+      </div>
+    </div>
+  </div>
+
+  <!-- RISK SIGNAL Popup -->
+  <div class="risk-signal-container" id="riskSignalPopup">
+    <div class="risk-signal-card">
+      <div class="risk-signal-header">
+        <div class="risk-signal-title">
+          <i class="fas fa-exclamation-triangle"></i> RISK SIGNAL
+        </div>
+        <button class="risk-close-btn" onclick="closeRiskSignalPopup()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="risk-signal-meta">
+        <div class="risk-meta-item">
+          <div class="risk-meta-label">Signal Time</div>
+          <div class="risk-meta-value time" id="risk-signal-time">-</div>
+        </div>
+        <div class="risk-meta-item">
+          <div class="risk-meta-label">Target</div>
+          <div class="risk-meta-value odd" id="risk-signal-odd">-</div>
+        </div>
+      </div>
+      
+      <div class="risk-countdown-section">
+        <div class="risk-countdown-circle">
+          <div id="risk-countdown-timer">20</div>
+        </div>
+        <div class="risk-countdown-label">SECONDS REMAINING</div>
+      </div>
+      
+      <div class="risk-strategy-section">
+        <div class="risk-strategy-title">
+          <i class="fas fa-chart-line"></i> RISK MANAGEMENT STRATEGY
+        </div>
+        
+        <div class="risk-strategy-steps" id="risk-strategy-steps">
+          <!-- Dynamic content will be inserted here -->
+        </div>
+      </div>
+      
+      <div class="risk-signal-footer">
+        THIS SIGNAL IS GENERATED USING THE XTREME AVIATOR HIGH ODD SIGNAL GENERATOR PRO TOOL WITH AI-POWERED ACCURACY
+      </div>
+    </div>
+  </div>
+
+  <audio id="signalSound" src="https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3" preload="auto"></audio>
+  <audio id="successSound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3" preload="auto"></audio>
+  <audio id="beepSound" src="https://assets.mixkit.co/sfx/preview/mixkit-positive-interface-beep-221.mp3" preload="auto"></audio>
+  <audio id="warningSound" src="https://assets.mixkit.co/sfx/preview/mixkit-sci-fi-alarm-905.mp3" preload="auto"></audio>
+  <textarea id="copyTemplate" style="position: absolute; left: -9999px;"></textarea>
+
+  <script>
+    // Global variables
+    let activeSignals = [];
+    let currentCountdown = null;
+    let serverTimeOffset = 0;
+    let selectedLogic = 1;
+    let activeSignalPopup = null;
+    let signalQueue = [];
+    let currentSignalIndex = 0;
+    let signalEndInterval = null;
+    let signalCountdownInterval = null;
+    let riskSignalCountdownInterval = null;
+    let disclaimerShown = false;
+    let tipsPopupShown = false;
+    let firstSignalGenerated = false;
+    let signalResultReceived = false;
+    let notificationCheckInterval = null;
+    let lastNotificationETag = '';
+    let lastNotificationModified = '';
+    let unseenNotifications = 0;
+    
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set initial placeholder values
+      document.getElementById("current-date").textContent = "Loading...";
+      document.getElementById("current-time").textContent = "--:--:--";
+      
+      // Then initialize the rest of the app
+      initializeApp();
+    });
+
+    function initializeApp() {
+      // Immediately update date/time to avoid delay
+      updateDateTime();
+      
+      loadHistory();
+      updateStats();
+      
+      // Check connection status immediately
+      checkConnection();
+      
+      // Set up connection monitoring
+      window.addEventListener('online', checkConnection);
+      window.addEventListener('offline', checkConnection);
+      
+      // Auto-focus input field
+      document.getElementById("highOddInput").focus();
+      
+      // Generate signal when Enter key is pressed
+      document.getElementById("highOddInput").addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          generateSignal();
+        }
+      });
+      
+      document.getElementById("timeInput").addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          generateSignal();
+        }
+      });
+      
+      // Add automatic time formatting
+      document.getElementById("timeInput").addEventListener('input', function(e) {
+        formatTimeInput(e.target);
+      });
+      
+      // Initialize signal popup events
+      document.getElementById("signalPopup").addEventListener('click', function(e) {
+        // Only close if clicking directly on the overlay background
+        if (e.target === this) {
+          e.stopPropagation();
+        }
+      });
+      
+      // Initialize risk signal popup events
+      document.getElementById("riskSignalPopup").addEventListener('click', function(e) {
+        // Only close if clicking directly on the overlay background
+        if (e.target === this) {
+          e.stopPropagation();
+        }
+      });
+      
+      // Initialize tips badge
+      const tipsBadge = document.getElementById("tipsBadge");
+      const tipsPopup = document.getElementById("tipsPopup");
+      
+      tipsBadge.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        tipsPopup.classList.toggle("show");
+        
+        // Hide disclaimer popup if showing
+        document.getElementById("disclaimerPopup").classList.remove("show");
+      });
+      
+      // Close popups when clicking elsewhere
+      document.addEventListener('click', function(e) {
+        if (!tipsBadge.contains(e.target) && !tipsPopup.contains(e.target)) {
+          tipsPopup.classList.remove("show");
+        }
+        
+        if (!disclaimerBadge.contains(e.target) && !disclaimerPopup.contains(e.target)) {
+          document.getElementById("disclaimerPopup").classList.remove("show");
+        }
+      });
+      
+      // Show disclaimer popup after 5 seconds if not shown before
+      if (!sessionStorage.getItem('disclaimerShown')) {
+        setTimeout(() => {
+          showDisclaimer();
+          setTimeout(hideDisclaimer, 8000);
+          sessionStorage.setItem('disclaimerShown', 'true');
+        }, 5000);
+      }
+      
+      // Create floating animation elements for offline page
+      const animationContainer = document.getElementById('connectionAnimation');
+      for (let i = 0; i < 15; i++) {
+        const dot = document.createElement('div');
+        dot.style.left = `${Math.random() * 100}%`;
+        dot.style.top = `${Math.random() * 100}%`;
+        dot.style.animationDelay = `${Math.random() * 15}s`;
+        dot.style.animationDuration = `${10 + Math.random() * 20}s`;
+        animationContainer.appendChild(dot);
+      }
+      
+      // Retry button functionality
+      const retryBtn = document.getElementById('retryBtn');
+      retryBtn.addEventListener('click', function() {
+        const btn = this;
+        const icon = btn.querySelector('i');
+        
+        // Show loading state
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> CONNECTING...';
+        
+        // Simulate connection check
+        setTimeout(() => {
+          if (navigator.onLine) {
+            // Success state
+            btn.innerHTML = '<i class="fas fa-check"></i> CONNECTION RESTORED!';
+            btn.style.background = `linear-gradient(90deg, var(--success), var(--primary))`;
+            
+            // Hide offline overlay
+            document.getElementById('offlineOverlay').classList.remove('active');
+            
+            // Sync server time
+            syncServerTime();
+            
+            // Start notification checking
+            startNotificationChecking();
+            
+            // Redirect back to app
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000);
+          } else {
+            // Error state
+            btn.innerHTML = '<i class="fas fa-times"></i> CONNECTION FAILED';
+            btn.style.background = `linear-gradient(90deg, var(--danger), var(--warning))`;
+            
+            // Reset button after delay
+            setTimeout(() => {
+              btn.innerHTML = '<i class="fas fa-sync-alt"></i> RETRY CONNECTION';
+              btn.style.background = `linear-gradient(90deg, var(--primary), var(--secondary))`;
+              btn.disabled = false;
+            }, 1500);
+          }
+        }, 2000);
+      });
+      
+      // Start checking for notifications
+      startNotificationChecking();
+      
+      // Load initial notifications
+      loadNotifications();
+    }
+    
+    // Clear specific input field
+    function clearInput(inputId) {
+      document.getElementById(inputId).value = '';
+      document.getElementById(inputId).focus();
+    }
+    
+    // Automatic time formatting function
+    function formatTimeInput(input) {
+      let value = input.value.replace(/[^0-9]/g, '');
+      
+      if (value.length > 2) {
+        value = value.substring(0, 2) + ':' + value.substring(2);
+      }
+      if (value.length > 5) {
+        value = value.substring(0, 5) + ':' + value.substring(5, 7);
+      }
+      
+      input.value = value;
+    }
+    
+    // Clear inputs function
+    function clearInputs() {
+      document.getElementById("highOddInput").value = '';
+      document.getElementById("timeInput").value = '';
+      document.getElementById("highOddInput").focus();
+    }
+    
+    // Logic selection function
+    function selectLogic(logicNumber) {
+      selectedLogic = logicNumber;
+      
+      // Update UI to show selected logic
+      document.querySelectorAll('.logic-option').forEach(option => {
+        option.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      // For Logic 2, check if seconds are provided
+      if (logicNumber === 2) {
+        const timeInput = document.getElementById("timeInput").value.trim();
+        const timeRegex = /^(\d{1,2}):(\d{1,2}):(\d{1,2})$/;
+        
+        if (!timeRegex.test(timeInput)) {
+          showErrorDialog("Logic 2 requires seconds in the time format (e.g., 10:44:54). Please enter time with seconds.");
+          return;
+        }
+      }
+      
+      // Automatically generate signal when logic is selected
+      generateSignal();
+    }
+    
+    // Generate signal based on high odd and time
+    function generateSignal() {
+      const highOddInput = document.getElementById("highOddInput").value.trim();
+      const timeInput = document.getElementById("timeInput").value.trim();
+      
+      // Validate inputs
+      if (!highOddInput || !timeInput) {
+        showErrorDialog("Please enter both high odd and time.");
+        return;
+      }
+      
+      // Extract odd value (remove 'x' if present)
+      const oddMatch = highOddInput.match(/(\d+\.?\d*)/);
+      if (!oddMatch) {
+        showErrorDialog("Please enter a valid high odd value (e.g., 33.41×).");
+        return;
+      }
+      
+      const highOdd = parseFloat(oddMatch[1]);
+      
+      // Validate high odd is above 10
+      if (highOdd <= 10) {
+        showErrorDialog("Please enter a high odd value above 10×.");
+        return;
+      }
+      
+      // Validate time format based on selected logic
+      let timeRegex;
+      if (selectedLogic === 2) {
+        // Logic 2 requires seconds
+        timeRegex = /^(\d{1,2}):(\d{1,2}):(\d{1,2})$/;
+        if (!timeRegex.test(timeInput)) {
+          showErrorDialog("Logic 2 requires seconds in the time format (e.g., 10:44:54). Please enter time with seconds.");
+          return;
+        }
+      } else {
+        // Other logics accept HH:MM or HH:MM:SS
+        timeRegex = /^(\d{1,2}):(\d{1,2})(?::(\d{1,2}))?$/;
+      }
+      
+      const timeMatch = timeInput.match(timeRegex);
+      if (!timeMatch) {
+        showErrorDialog("Please enter a valid time (e.g., 23:44:32 or 23:44).");
+        return;
+      }
+      
+      let hours = parseInt(timeMatch[1]);
+      let minutes = parseInt(timeMatch[2]);
+      let seconds = timeMatch[3] ? parseInt(timeMatch[3]) : 0;
+      
+      // Validate time values
+      if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59 || seconds < 0 || seconds > 59) {
+        showErrorDialog("Please enter a valid time (hours: 0-23, minutes: 0-59, seconds: 0-59).");
+        return;
+      }
+      
+      // Apply selected logic
+      let calculatedTime;
+      let nextTime;
+      let signalWindow;
+      
+      switch(selectedLogic) {
+        case 1:
+          // Logic 1: Decimal addition
+          const decimalPart = highOdd.toString().split('.')[1];
+          if (decimalPart && decimalPart.length >= 2) {
+            // Get the second decimal digit
+            const secondDecimal = parseInt(decimalPart[1]);
+            
+            // Add the second decimal to minutes
+            minutes += secondDecimal;
+            if (minutes >= 60) {
+              minutes -= 60;
+              hours = (hours + 1) % 24;
+            }
+            
+            // Calculate the three times for the signal window
+            const prevMinutes = (minutes - 1 + 60) % 60;
+            const prevHours = minutes === 0 ? (hours - 1 + 24) % 24 : hours;
+            
+            const nextMinutes = (minutes + 1) % 60;
+            const nextHours = minutes === 59 ? (hours + 1) % 24 : hours;
+            
+            calculatedTime = formatTime(hours, minutes, 0);
+            signalWindow = `${formatTime(prevHours, prevMinutes, 0)} / ${calculatedTime} / ${formatTime(nextHours, nextMinutes, 0)}`;
+            nextTime = formatTime(nextHours, nextMinutes, 0);
+          } else {
+            // If no decimal part, use default calculation
+            calculatedTime = formatTime(hours, minutes, 0);
+            nextTime = formatTime(hours, (minutes + 1) % 60, 0);
+            signalWindow = `${formatTime(hours, (minutes - 1 + 60) % 60, 0)} / ${calculatedTime} / ${nextTime}`;
+          }
+          break;
+          
+        case 2:
+          // Logic 2: Odd-even pattern (NEW IMPLEMENTATION)
+          const logic2Result = applyLogic2(highOdd, hours, minutes, seconds);
+          calculatedTime = logic2Result.calculatedTime;
+          nextTime = logic2Result.nextTime;
+          signalWindow = `${logic2Result.prevTime} / ${calculatedTime}`;
+          break;
+          
+        case 3:
+          // Logic 3: Time reversal (currently disabled)
+          calculatedTime = formatTime(hours, minutes, 0);
+          nextTime = formatTime(hours, (minutes + 1) % 60, 0);
+          signalWindow = `${formatTime(hours, (minutes - 1 + 60) % 60, 0)} / ${calculatedTime} / ${nextTime}`;
+          break;
+          
+        case 4:
+          // Logic 4: Advanced Pattern (placeholder for now)
+          calculatedTime = formatTime(hours, minutes, 0);
+          nextTime = formatTime(hours, (minutes + 1) % 60, 0);
+          signalWindow = `${formatTime(hours, (minutes - 1 + 60) % 60, 0)} / ${calculatedTime} / ${nextTime}`;
+          break;
+          
+        default:
+          calculatedTime = formatTime(hours, minutes, 0);
+          nextTime = formatTime(hours, (minutes + 1) % 60, 0);
+          signalWindow = `${formatTime(hours, (minutes - 1 + 60) % 60, 0)} / ${calculatedTime} / ${nextTime}`;
+      }
+      
+      const originalTime = formatTime(
+        parseInt(timeMatch[1]), 
+        parseInt(timeMatch[2]), 
+        timeMatch[3] ? parseInt(timeMatch[3]) : 0
+      );
+      
+      // Calculate confidence based on logic and odd value
+      let confidence = 70;
+      if (highOdd > 50) confidence += 10;
+      if (highOdd > 100) confidence += 10;
+      if (selectedLogic === 1) confidence += 5;
+      if (selectedLogic === 2) confidence += 8; // Higher confidence for Logic 2
+      if (selectedLogic === 4) confidence += 3; // Slightly higher for Logic 4
+      
+      confidence = Math.min(95, confidence);
+      
+      // Update UI with results
+      document.getElementById("result-odd").textContent = `${highOdd}×`;
+      document.getElementById("result-original-time").textContent = originalTime;
+      document.getElementById("result-confidence").textContent = `${confidence}%`;
+      document.getElementById("result-window").textContent = signalWindow;
+      
+      // Show results sections
+      document.getElementById("output").style.display = 'block';
+      
+      // Enable copy button
+      document.getElementById("copyResultBtn").disabled = false;
+      
+      // Log to history - FIXED: Pass signalWindow variable correctly
+      logHistory(highOdd, originalTime, calculatedTime, nextTime, confidence, signalWindow);
+      
+      // Show success message
+      showSuccessDialog(`Signal generated with ${confidence}% confidence!`);
+      
+      // Scroll to results
+      document.getElementById("output").scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      
+      // Set up countdown for the signal window
+      setupCountdown(calculatedTime, nextTime, highOdd);
+    }
+    
+    // NEW: Logic 2 implementation based on the provided algorithm
+    function applyLogic2(highOdd, hours, minutes, seconds) {
+      // Extract decimal part after the decimal point
+      const decimalPart = highOdd.toString().split('.')[1];
+      if (!decimalPart || decimalPart.length < 2) {
+        // If no decimal part or less than 2 digits, use default calculation
+        const calculatedTime = formatTime(hours, minutes, 0);
+        const prevTime = formatTime(hours, (minutes - 1 + 60) % 60, 0);
+        return {
+          calculatedTime: calculatedTime,
+          prevTime: prevTime,
+          nextTime: calculatedTime
+        };
+      }
+      
+      // Step 1: Add decimal digits to seconds
+      const decimalDigits = parseInt(decimalPart.substring(0, 2));
+      let totalSeconds = seconds + decimalDigits;
+      
+      // Step 2: Calculate minutes from total seconds
+      const extraMinutesFromSeconds = Math.floor(totalSeconds / 60);
+      const remainingSeconds = totalSeconds % 60;
+      
+      // Step 3: Add integer part of high odd to minutes
+      const integerPart = Math.floor(highOdd);
+      let totalMinutes = minutes + integerPart + extraMinutesFromSeconds;
+      
+      // Step 4: Calculate hours from total minutes
+      const extraHours = Math.floor(totalMinutes / 60);
+      const finalMinutes = totalMinutes % 60;
+      
+      // Step 5: Add extra hours to original hours
+      let finalHours = hours + extraHours;
+      
+      // Step 6: Handle hour overflow (24-hour format)
+      finalHours = finalHours % 24;
+      
+      // Step 7: Get the decimal part of the division result for minutes
+      const divisionResult = totalMinutes / 60;
+      const decimalPartOfDivision = divisionResult.toString().split('.')[1];
+      
+      let finalSignalMinutes;
+      if (decimalPartOfDivision && decimalPartOfDivision.length >= 2) {
+        // Get first two digits after decimal point
+        finalSignalMinutes = parseInt(decimalPartOfDivision.substring(0, 2));
+        
+        // Add the extra minutes we calculated earlier
+        finalSignalMinutes += extraMinutesFromSeconds;
+        
+        // Handle minute overflow
+        if (finalSignalMinutes >= 60) {
+          finalSignalMinutes -= 60;
+          finalHours = (finalHours + 1) % 24;
+        }
+      } else {
+        // If no decimal part in division, use the final minutes
+        finalSignalMinutes = finalMinutes;
+      }
+      
+      // Check if the calculated time is in the past
+      const now = new Date();
+      const calculatedTimeObj = new Date();
+      calculatedTimeObj.setHours(finalHours, finalSignalMinutes, 0, 0);
+      
+      if (calculatedTimeObj < now) {
+        // If in the past, add 1 hour
+        finalHours = (finalHours + 1) % 24;
+      }
+      
+      // Format the final time
+      const calculatedTime = formatTime(finalHours, finalSignalMinutes, 0);
+      
+      // Calculate previous minute
+      let prevMinutes = (finalSignalMinutes - 1 + 60) % 60;
+      let prevHours = finalSignalMinutes === 0 ? (finalHours - 1 + 24) % 24 : finalHours;
+      const prevTime = formatTime(prevHours, prevMinutes, 0);
+      
+      return {
+        calculatedTime: calculatedTime,
+        prevTime: prevTime,
+        nextTime: calculatedTime
+      };
+    }
+    
+    // Format time as HH:MM
+    function formatTime(hours, minutes, seconds) {
+      const pad = (num) => num.toString().padStart(2, '0');
+      return `${pad(hours)}:${pad(minutes)}`;
+    }
+    
+    // Setup countdown for signal window - UPDATED with color changes
+    function setupCountdown(calculatedTime, nextTime, highOdd) {
+      // Clear any existing countdown
+      if (currentCountdown) {
+        clearInterval(currentCountdown);
+      }
+      
+      const now = new Date();
+      const [calcHours, calcMinutes] = calculatedTime.split(':').map(Number);
+      const [nextHours, nextMinutes] = nextTime.split(':').map(Number);
+      
+      const calcTime = new Date();
+      calcTime.setHours(calcHours, calcMinutes, 0, 0);
+      
+      const nextTimeObj = new Date();
+      nextTimeObj.setHours(nextHours, nextMinutes, 0, 0);
+      
+      // If the calculated time has already passed today, set it for tomorrow
+      if (calcTime < now) {
+        calcTime.setDate(calcTime.getDate() + 1);
+      }
+      
+      // If the next time has already passed today, set it for tomorrow
+      if (nextTimeObj < now) {
+        nextTimeObj.setDate(nextTimeObj.getDate() + 1);
+      }
+      
+      // Update countdown display
+      currentCountdown = setInterval(() => {
+        const now = new Date();
+        const diffToCalc = calcTime - now;
+        const diffToNext = nextTimeObj - now;
+        
+        const countdownElement = document.getElementById("countdown");
+        
+        if (diffToCalc > 0) {
+          // Countdown to calculated time
+          const totalSeconds = Math.floor(diffToCalc / 1000);
+          const min = Math.floor(totalSeconds / 60);
+          const sec = totalSeconds % 60;
+          
+          countdownElement.textContent = `Next ${highOdd}× signal in: ${min}m ${sec}s`;
+          
+          // Apply color based on time remaining
+          if (totalSeconds <= 30) {
+            countdownElement.className = "countdown danger";
+          } else if (totalSeconds <= 60) {
+            countdownElement.className = "countdown warning";
+          } else {
+            countdownElement.className = "countdown";
+          }
+          
+          // Apply extreme color for 100x+ signals
+          if (highOdd >= 100) {
+            countdownElement.className = "countdown extreme";
+          }
+        } else if (diffToNext > 0) {
+          // Signal window is active
+          const totalSeconds = Math.floor(diffToNext / 1000);
+          const min = Math.floor(totalSeconds / 60);
+          const sec = totalSeconds % 60;
+          
+          countdownElement.textContent = `Signal window closing in: ${min}m ${sec}s`;
+          
+          // Apply color based on time remaining
+          if (totalSeconds <= 30) {
+            countdownElement.className = "countdown danger";
+          } else if (totalSeconds <= 60) {
+            countdownElement.className = "countdown warning";
+          } else {
+            countdownElement.className = "countdown";
+          }
+          
+          // Apply extreme color for 100x+ signals
+          if (highOdd >= 100) {
+            countdownElement.className = "countdown extreme";
+          }
+        } else {
+          // Signal window has passed
+          countdownElement.textContent = "Signal window has passed. Generate a new signal.";
+          countdownElement.className = "countdown danger";
+          clearInterval(currentCountdown);
+        }
+      }, 1000);
+    }
+    
+    // Settings functions
+    function showSettings() {
+      document.getElementById("settingsPanel").classList.add("show");
+    }
+    
+    function hideSettings() {
+      document.getElementById("settingsPanel").classList.remove("show");
+    }
+    
+    function setLanguage(lang) {
+      // Update active button
+      document.querySelectorAll('.language-option').forEach(option => {
+        option.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      // Save preference
+      localStorage.setItem('language', lang);
+      
+      // Here you would implement language switching logic
+      // This would require translation strings and updating the UI
+    }
+    
+    // Start checking for notifications
+    function startNotificationChecking() {
+      if (notificationCheckInterval) {
+        clearInterval(notificationCheckInterval);
+      }
+      
+      // Check every 15 seconds
+      notificationCheckInterval = setInterval(checkForNewNotifications, 15000);
+    }
+    
+    // Check for new notifications
+    async function checkForNewNotifications() {
+      try {
+        const response = await fetch('notifications.json', {
+          method: 'HEAD'
+        });
+        
+        const currentETag = response.headers.get('ETag');
+        const currentModified = response.headers.get('Last-Modified');
+        
+        if (currentETag !== lastNotificationETag || currentModified !== lastNotificationModified) {
+          // There are changes, load the new notifications
+          loadNotifications();
+          lastNotificationETag = currentETag;
+          lastNotificationModified = currentModified;
+        }
+      } catch (e) {
+        console.error("Time sync failed, using local time:", e);
+      }
+    }
+    
+    // Load notifications from JSON file
+    async function loadNotifications() {
+      try {
+        const response = await fetch('notifications.json');
+        const notifications = await response.json();
+        
+        // Store the ETag and Last-Modified headers for future checks
+        lastNotificationETag = response.headers.get('ETag');
+        lastNotificationModified = response.headers.get('Last-Modified');
+        
+        // Get the last seen notification time from localStorage
+        const lastSeen = localStorage.getItem('lastSeenNotification') || '0';
+        
+        // Count unseen notifications
+        unseenNotifications = notifications.filter(n => {
+          const notifTime = new Date(n.timestamp).getTime();
+          return notifTime > parseInt(lastSeen);
+        }).length;
+        
+        // Update badge
+        updateNotificationBadge();
+        
+        // Render notifications
+        renderNotifications(notifications);
+      } catch (e) {
+        console.error("Failed to load notifications:", e);
+        
+        // If the file doesn't exist, use default notifications
+        const defaultNotifications = [
+          {
+            "title": "Algorithm Updated",
+            "message": "High odd prediction සඳහා නව ඇල්ගොරිතමය යාවත්කාලීන කරන ලදි.",
+            "type": "algorithm_update",
+            "timestamp": new Date().toISOString()
+          },
+          {
+            "title": "Bug Fixed",
+            "message": "Timer ක්‍රියාවලියේ සිදුවූ දෝෂයක් නිවැරදි කරන ලදි.",
+            "type": "bug_fix",
+            "timestamp": new Date(Date.now() - 3600000).toISOString()
+          },
+          {
+            "title": "Welcome Message",
+            "message": "නව තොරතුරු සහ උපදෙස් සඳහා Telegram channel එක සෙවීම නිවැරදියි.",
+            "type": "general",
+            "timestamp": new Date(Date.now() - 86400000).toISOString()
+          }
+        ];
+        
+        renderNotifications(defaultNotifications);
+      }
+    }
+    
+    // Update notification badge
+    function updateNotificationBadge() {
+      const badge = document.getElementById('notificationBadge');
+      
+      if (unseenNotifications > 0) {
+        badge.style.display = 'flex';
+        badge.textContent = unseenNotifications > 9 ? '9+' : unseenNotifications;
+      } else {
+        badge.style.display = 'none';
+      }
+    }
+    
+    // Render notifications in the UI
+    function renderNotifications(notifications) {
+      const container = document.getElementById('notificationTabContent');
+      container.innerHTML = '';
+      
+      // Sort by timestamp (newest first)
+      notifications.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+      
+      notifications.forEach(notification => {
+        const item = document.createElement('div');
+        item.className = `notification-item notification-${notification.type}`;
+        
+        // Get icon based on type
+        let icon, iconClass;
+        switch(notification.type) {
+          case 'algorithm_update':
+            icon = '⚙️';
+            iconClass = 'fas fa-cogs';
+            break;
+          case 'bug_fix':
+            icon = '🐞';
+            iconClass = 'fas fa-bug';
+            break;
+          default:
+            icon = '🔔';
+            iconClass = 'fas fa-bell';
+        }
+        
+        // Format time
+        const timeStr = formatRelativeTime(new Date(notification.timestamp));
+        
+        item.innerHTML = `
+          <div class="notification-title">
+            <i class="${iconClass}"></i> ${notification.title}
+          </div>
+          <div class="notification-time">
+            <i class="far fa-clock"></i> ${timeStr}
+          </div>
+          <div class="notification-message">
+            ${notification.message}
+          </div>
+        `;
+        
+        container.appendChild(item);
+      });
+    }
+    
+    // Format time as "X time ago"
+    function formatRelativeTime(date) {
+      const now = new Date();
+      const diff = now - date;
+      
+      const minute = 60 * 1000;
+      const hour = 60 * minute;
+      const day = 24 * hour;
+      const month = 30 * day;
+      const year = 365 * day;
+      
+      if (diff < minute) {
+        return "Just now";
+      } else if (diff < hour) {
+        const minutes = Math.floor(diff / minute);
+        return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+      } else if (diff < day) {
+        const hours = Math.floor(diff / hour);
+        return `${hours} hour${hours > 1 ? 's' : ''} ago`;
+      } else if (diff < month) {
+        const days = Math.floor(diff / day);
+        return `${days} day${days > 1 ? 's' : ''} ago`;
+      } else if (diff < year) {
+        const months = Math.floor(diff / month);
+        return `${months} month${months > 1 ? 's' : ''} ago`;
+      } else {
+        const years = Math.floor(diff / year);
+        return `${years} year${years > 1 ? 's' : ''} ago`;
+      }
+    }
+    
+    // Tab switching function - UPDATED to handle notification badge
+    function switchTab(tabId, clickedElement) {
+      // Hide all tab contents
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      
+      // Show selected tab content
+      document.getElementById(tabId).classList.add('active');
+      
+      // Update active nav item
+      document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      
+      clickedElement.classList.add('active');
+      
+      // If switching to notification tab, mark notifications as seen
+      if (tabId === 'notificationTab') {
+        markNotificationsAsSeen();
+      }
+      
+      // Scroll to top
+      document.querySelector('.scroll-container').scrollTo(0, 0);
+    }
+    
+    // Mark notifications as seen
+    function markNotificationsAsSeen() {
+      unseenNotifications = 0;
+      updateNotificationBadge();
+      
+      // Store the current time as last seen
+      localStorage.setItem('lastSeenNotification', Date.now().toString());
+    }
+    
+    // Check connection status
+    function checkConnection() {
+      if (navigator.onLine) {
+        document.getElementById('offlineOverlay').classList.remove('active');
+        syncServerTime(); // Sync time when connection is restored
+      } else {
+        document.getElementById('offlineOverlay').classList.add('active');
+      }
+    }
+    
+    // Show disclaimer popup
+    function showDisclaimer() {
+      const popup = document.getElementById("disclaimerPopup");
+      popup.classList.add("show");
+    }
+    
+    // Hide disclaimer popup
+    function hideDisclaimer() {
+      const popup = document.getElementById("disclaimerPopup");
+      popup.classList.remove("show");
+    }
+    
+    // Show tips popup after signal generation and result
+    function showTipsPopup() {
+      if (!tipsPopupShown && signalResultReceived) {
+        const tipsPopup = document.getElementById("tipsPopup");
+        tipsPopup.classList.add("show");
+        tipsPopupShown = true;
+        
+        // Auto-hide after 8 seconds
+        setTimeout(() => {
+          tipsPopup.classList.remove("show");
+        }, 8000);
+      }
+    }
+    
+    // Update current date and time with server sync
+    function updateDateTime() {
+      const now = new Date(Date.now() + serverTimeOffset);
+      document.getElementById("current-date").textContent = now.toLocaleDateString('en-US', { 
+        weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' 
+      });
+      document.getElementById("current-time").textContent = now.toLocaleTimeString();
+    }
+    
+    setInterval(updateDateTime, 1000);
+    
+    // Sync with server time for maximum accuracy (runs in background)
+    async function syncServerTime() {
+      try {
+        const start = Date.now();
+        const response = await fetch('https://worldtimeapi.org/api/ip');
+        const data = await response.json();
+        const serverTime = new Date(data.utc_datetime).getTime();
+        const end = Date.now();
+        const rtt = end - start;
+        
+        // Calculate offset accounting for network latency
+        serverTimeOffset = serverTime - end + (rtt / 2);
+        
+        console.log(`Time synced successfully (${rtt}ms latency)`);
+        
+        // Recheck any active signals with corrected time
+        checkNextSignal();
+      } catch (e) {
+        console.error("Time sync failed, using local time:", e);
+      }
+    }
+    
+    // Audio functions
+    function playSignalSound() {
+      const audio = document.getElementById("signalSound");
+      audio.currentTime = 0;
+      audio.play().catch(e => console.log("Audio play failed:", e));
+    }
+    
+    function playSuccessSound() {
+      const audio = document.getElementById("successSound");
+      audio.currentTime = 0;
+      audio.play().catch(e => console.log("Audio play failed:", e));
+    }
+    
+    function playBeepSound() {
+      const audio = document.getElementById("beepSound");
+      audio.currentTime = 0;
+      audio.play().catch(e => console.log("Beep sound play failed:", e));
+    }
+    
+    function playWarningSound() {
+      const audio = document.getElementById("warningSound");
+      audio.currentTime = 0;
+      audio.play().catch(e => console.log("Warning sound play failed:", e));
+    }
+    
+    // Generate WhatsApp message template - UPDATED with new format
+    function generateWhatsAppTemplate(odd, originalTime, calculatedTime, nextTime, confidence, logic) {
+      let signalInfo;
+      
+      if (logic === 1 || logic === 3 || logic === 4) {
+        signalInfo = `Signal Window: ${calculatedTime}`;
+      } else if (logic === 2) {
+        signalInfo = `Signal Window: ${calculatedTime}`;
+      } else {
+        signalInfo = `Signal Window: ${calculatedTime}`;
+      }
+      
+      return `𝕏treme Aviator High Odd Predictor\n\n${signalInfo}\n\nRecommended Cashout: 10× & 20× (Double Bet Mode)\n\nThis signal is generated using the XTREME AVIATOR HIGH ODD SIGNAL GENERATOR PRO tool with AI-powered accuracy.`;
+    }
+    
+    // Generate result copy template - UPDATED with new format
+    function generateResultCopyTemplate() {
+      const odd = document.getElementById("result-odd").textContent;
+      const originalTime = document.getElementById("result-original-time").textContent;
+      const confidence = document.getElementById("result-confidence").textContent;
+      const signalWindow = document.getElementById("result-window").textContent;
+      
+      return `𝕏treme Aviator High Odd Predictor\n\nSignal Window: ${signalWindow}\n\nRecommended Cashout: 10× & 20× (Double Bet Mode)\n\nThis signal is generated using the XTREME AVIATOR HIGH ODD SIGNAL GENERATOR PRO tool with AI-powered accuracy.`;
+    }
+    
+    // Copy to clipboard function
+    function copyToClipboard(text) {
+      const textarea = document.getElementById("copyTemplate");
+      textarea.value = text;
+      textarea.select();
+      document.execCommand("copy");
+      
+      // Show feedback
+      const originalText = document.activeElement.innerHTML;
+      document.activeElement.innerHTML = '<i class="fas fa-check"></i> Copied!';
+      setTimeout(() => {
+        document.activeElement.innerHTML = originalText;
+      }, 2000);
+    }
+    
+    function copyResultToClipboard(e) {
+      e.preventDefault();
+      const template = generateResultCopyTemplate();
+      copyToClipboard(template);
+    }
+    
+    function copySignalToClipboard(e, odd, originalTime, calculatedTime, nextTime, confidence) {
+      e.preventDefault();
+      e.stopPropagation();
+      const template = generateWhatsAppTemplate(odd, originalTime, calculatedTime, nextTime, confidence, selectedLogic);
+      copyToClipboard(template);
+    }
+    
+    // History functions - FIXED: Added signalWindow parameter
+    function logHistory(odd, originalTime, calculatedTime, nextTime, confidence, signalWindow) {
+      const log = document.getElementById("historyLog");
+      const entry = document.createElement("div");
+      entry.className = `history-item`;
+      if (odd >= 100) entry.classList.add('extreme');
+      entry.dataset.id = Date.now();
+      
+      entry.innerHTML = `
+        <div class="history-time">
+          <i class="far fa-clock"></i> ${new Date().toLocaleTimeString()}
+        </div>
+        <div class="history-multiplier">
+          <span>${odd}×</span>
+        </div>
+        <div class="history-details">
+          <span><i class="fas fa-bolt"></i> Original: ${originalTime}</span>
+          <span><i class="fas fa-shield-alt"></i> Confidence: ${confidence}%</span>
+          <span><i class="fas fa-arrow-right"></i> Next: ${signalWindow}</span>
+        </div>
+        <button class="copy-btn" onclick="copySignalToClipboard(event, '${odd}', '${originalTime}', '${calculatedTime}', '${nextTime}', '${confidence}')">
+          <i class="fas fa-copy"></i> Copy
+        </button>
+      `;
+      
+      log.insertBefore(entry, log.firstChild);
+      
+      // Save to localStorage
+      const history = JSON.parse(localStorage.getItem('aviatorHistory')) || [];
+      history.unshift({
+        id: entry.dataset.id,
+        time: new Date().toLocaleTimeString(),
+        odd,
+        originalTime,
+        calculatedTime,
+        nextTime,
+        confidence,
+        signalWindow, // FIXED: Added signalWindow to history object
+        timestamp: Date.now(),
+        wasSuccessful: null,
+        actualMultiplier: null
+      });
+      localStorage.setItem('aviatorHistory', JSON.stringify(history));
+      
+      // Update stats
+      updateStats();
+    }
+    
+    function updateStats() {
+      const history = JSON.parse(localStorage.getItem('aviatorHistory')) || [];
+      
+      // Total predictions
+      document.getElementById("total-predictions").textContent = history.length;
+    }
+    
+    // Dialog functions
+    function showClearDialog() {
+      document.getElementById("clearDialog").classList.add("active");
+    }
+    
+    function hideClearDialog() {
+      document.getElementById("clearDialog").classList.remove("active");
+    }
+    
+    function showErrorDialog(message) {
+      document.getElementById("errorMessage").textContent = message;
+      document.getElementById("errorDialog").classList.add("active");
+    }
+    
+    function hideErrorDialog() {
+      document.getElementById("errorDialog").classList.remove("active");
+    }
+    
+    function showSuccessDialog(message) {
+      document.getElementById("successMessage").textContent = message;
+      document.getElementById("successDialog").classList.add("active");
+      playSuccessSound();
+    }
+    
+    function hideSuccessDialog() {
+      document.getElementById("successDialog").classList.remove("active");
+      
+      // After hiding the success dialog, check if we should show tips popup
+      if (signalResultReceived) {
+        setTimeout(showTipsPopup, 1000);
+      }
+    }
+    
+    function clearHistory() {
+      document.getElementById("historyLog").innerHTML = '';
+      localStorage.removeItem('aviatorHistory');
+      document.getElementById("countdown").textContent = "No active signals. Generate a new signal.";
+      document.getElementById("countdown").className = "countdown warning";
+      if (currentCountdown) {
+        clearInterval(currentCountdown);
+        currentCountdown = null;
+      }
+      
+      // Clear the results display
+      document.getElementById("result-odd").textContent = "-";
+      document.getElementById("result-original-time").textContent = "-";
+      document.getElementById("result-confidence").textContent = "-";
+      document.getElementById("result-window").textContent = "-";
+      
+      // Reset stats
+      updateStats();
+      
+      hideClearDialog();
+    }
+    
+    function loadHistory() {
+      const history = JSON.parse(localStorage.getItem('aviatorHistory')) || [];
+      const log = document.getElementById("historyLog");
+      log.innerHTML = '';
+      
+      // Sort by timestamp (newest first)
+      history.sort((a, b) => b.timestamp - a.timestamp);
+      
+      history.forEach(item => {
+        const entry = document.createElement("div");
+        entry.className = `history-item`;
+        if (item.odd >= 100) entry.classList.add('extreme');
+        if (item.wasSuccessful === true) entry.classList.add('success');
+        if (item.wasSuccessful === false) entry.classList.add('failure');
+        entry.dataset.id = item.id;
+        
+        // Determine the color class for the actual multiplier
+        let multiplierClass = '';
+        if (item.actualMultiplier) {
+          if (item.actualMultiplier >= 100) {
+            multiplierClass = 'actual-multiplier-100';
+          } else if (item.actualMultiplier >= 10) {
+            multiplierClass = 'actual-multiplier-10';
+          } else if (item.actualMultiplier >= 7) {
+            multiplierClass = 'actual-multiplier-7';
+          } else if (item.actualMultiplier >= 4) {
+            multiplierClass = 'actual-multiplier-4';
+          } else if (item.actualMultiplier >= 3) {
+            multiplierClass = 'actual-multiplier-3';
+          } else {
+            multiplierClass = 'actual-multiplier-2';
+          }
+        }
+        
+        entry.innerHTML = `
+          <div class="history-time">
+            <i class="far fa-clock"></i> ${item.time}
+            ${item.wasSuccessful !== null ? 
+              `<span class="actual-multiplier ${multiplierClass}" style="margin-left: 8px; font-size: 0.8em;">
+                <i class="fas ${item.wasSuccessful ? 'fa-check' : 'fa-times'}"></i>
+                ${item.actualMultiplier ? `${item.actualMultiplier}×` : ''}
+              </span>` : ''}
+          </div>
+          <div class="history-multiplier">
+            <span>${item.odd}×</span>
+          </div>
+          <div class="history-details">
+            <span><i class="fas fa-bolt"></i> Original: ${item.originalTime}</span>
+            <span><i class="fas fa-shield-alt"></i> Confidence: ${item.confidence}%</span>
+            <span><i class="fas fa-arrow-right"></i> Next: ${item.signalWindow}</span>
+          </div>
+          <button class="copy-btn" onclick="copySignalToClipboard(event, '${item.odd}', '${item.originalTime}', '${item.calculatedTime}', '${item.nextTime}', '${item.confidence}')">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+        `;
+        
+        log.appendChild(entry);
+      });
+    }
+    
+    // Function to record actual results (call this after a round completes)
+    function recordResult(signalId, actualMultiplier) {
+      const history = JSON.parse(localStorage.getItem('aviatorHistory')) || [];
+      const signalIndex = history.findIndex(item => item.id == signalId);
+      
+      if (signalIndex !== -1) {
+        history[signalIndex].actualMultiplier = actualMultiplier;
+        history[signalIndex].wasSuccessful = actualMultiplier >= history[signalIndex].odd;
+        localStorage.setItem('aviatorHistory', JSON.stringify(history));
+        loadHistory(); // Refresh the display
+        updateStats();
+        
+        // Set flag that we've received a signal result
+        signalResultReceived = true;
+        
+        // Show result notification
+        const resultMessage = `Result recorded! Multiplier: ${actualMultiplier}× - ${
+          history[signalIndex].wasSuccessful ? 'SUCCESS!' : 'TRY AGAIN'
+        }`;
+        
+        // Create a temporary element to check if message contains "TRY AGAIN"
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = resultMessage;
+        const isFailure = tempDiv.textContent.includes('TRY AGAIN');
+        
+        // Update the dialog message with appropriate styling
+        const messageElement = document.getElementById("successMessage");
+        messageElement.innerHTML = isFailure 
+          ? `<span class="failed-signal-message">${resultMessage}</span>`
+          : resultMessage;
+        
+        showSuccessDialog(resultMessage);
+      }
+    }
+
+    // Auto result tracking simulation (for demo purposes)
+    function simulateAutoTracking() {
+      setInterval(() => {
+        const history = JSON.parse(localStorage.getItem('aviatorHistory')) || [];
+        if (history.length > 0 && history[0].wasSuccessful === null) {
+          // Simulate a random result between 1x and 150x (with very low chance for 100x+)
+          let actualMultiplier;
+          if (Math.random() < 0.01) { // 1% chance for 100x+
+            actualMultiplier = (Math.random() * 50 + 100).toFixed(2);
+          } else {
+            actualMultiplier = (Math.random() * 14 + 1).toFixed(2);
+          }
+          recordResult(history[0].id, parseFloat(actualMultiplier));
+        }
+      }, 10000); // Check every 10 seconds
+    }
+    
+    // Start simulation (remove in production)
+    simulateAutoTracking();
+    
+    // Check for next signal
+    function checkNextSignal() {
+      // This function would check for upcoming signals based on the calculated times
+      // Implementation would depend on how you want to handle multiple signals
+    }
+  </script>
+</body>
+</html>
