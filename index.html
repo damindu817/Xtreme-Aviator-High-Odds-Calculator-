@@ -3019,7 +3019,7 @@
       };
     }
     
-    // NEW: Logic 3 implementation - Time Reversal
+    // NEW: Logic 3 implementation - Time Reversal (FIXED VERSION)
     function applyLogic3(highOdd, hours, minutes) {
       // Step 1: Extract decimal part of odd -> two digits -> take second digit
       const decimalPart = highOdd.toString().split('.')[1];
@@ -3050,6 +3050,7 @@
       newTimeObj.setHours(hours, newMinutes, 0, 0);
       
       let finalMinutes = newMinutes;
+      let finalHours = hours;
       
       // Step 4: If new time < original time, add +1 to minutes' first digit
       if (newTimeObj < originalTimeObj) {
@@ -3060,16 +3061,26 @@
         // Handle minute overflow
         if (finalMinutes >= 60) {
           finalMinutes -= 60;
-          hours = (hours + 1) % 24;
+          finalHours = (finalHours + 1) % 24;
         }
       }
       
+      // NEW: Check if final time is still in the past compared to current time
+      const now = new Date();
+      const finalTimeObj = new Date();
+      finalTimeObj.setHours(finalHours, finalMinutes, 0, 0);
+      
+      if (finalTimeObj < now) {
+        // If still in the past, add 1 hour
+        finalHours = (finalHours + 1) % 24;
+      }
+      
       // Step 5: Final Signal Time (seconds removed)
-      const calculatedTime = formatTime(hours, finalMinutes, 0);
+      const calculatedTime = formatTime(finalHours, finalMinutes, 0);
       
       // Step 6: Signal Window (previous minute + final minute)
       let prevMinutes = (finalMinutes - 1 + 60) % 60;
-      let prevHours = finalMinutes === 0 ? (hours - 1 + 24) % 24 : hours;
+      let prevHours = finalMinutes === 0 ? (finalHours - 1 + 24) % 24 : finalHours;
       const prevTime = formatTime(prevHours, prevMinutes, 0);
       
       return {
