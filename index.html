@@ -395,6 +395,14 @@
       margin: 25px 0;
     }
     
+    .logic-selection label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--light-2);
+    }
+    
     .logic-options {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -402,7 +410,7 @@
     }
     
     .logic-option {
-      padding: 15px 10px;
+      padding: 12px 8px;
       border: none;
       border-radius: 10px;
       font-weight: 600;
@@ -418,6 +426,7 @@
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-top: 3px solid var(--primary);
+      min-height: 70px;
     }
     
     .logic-option:hover {
@@ -431,17 +440,18 @@
     }
     
     .logic-option span:first-child {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 700;
       margin-bottom: 5px;
       z-index: 2;
     }
     
     .logic-option span:last-child {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       opacity: 0.8;
       z-index: 2;
       text-align: center;
+      line-height: 1.2;
     }
     
     /* Signal Times Display */
@@ -2024,7 +2034,7 @@
       }
       
       .logic-options {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
       }
       
       .input-row {
@@ -2116,6 +2126,20 @@
       .signal-footer, .risk-signal-footer {
         padding: 8px 15px 10px;
         font-size: 0.6rem;
+      }
+      
+      /* Adjust logic buttons for mobile */
+      .logic-option {
+        padding: 10px 6px;
+        min-height: 65px;
+      }
+      
+      .logic-option span:first-child {
+        font-size: 0.9rem;
+      }
+      
+      .logic-option span:last-child {
+        font-size: 0.7rem;
       }
     }
   </style>
@@ -2731,6 +2755,17 @@
       });
       event.target.classList.add('active');
       
+      // For Logic 2, check if seconds are provided
+      if (logicNumber === 2) {
+        const timeInput = document.getElementById("timeInput").value.trim();
+        const timeRegex = /^(\d{1,2}):(\d{1,2}):(\d{1,2})$/;
+        
+        if (!timeRegex.test(timeInput)) {
+          showErrorDialog("Logic 2 requires seconds in the time format (e.g., 10:44:54). Please enter time with seconds.");
+          return;
+        }
+      }
+      
       // Automatically generate signal when logic is selected
       generateSignal();
     }
@@ -2984,11 +3019,15 @@
       };
     }
     
-    // NEW: Logic 3 implementation - Time Reversal (තත්පර අණසක කිරීම)
+    // NEW: Logic 3 implementation - Time Reversal
     function applyLogic3(highOdd, hours, minutes) {
-      // Step 1: Extract decimal part of odd
+      // Step 1: Extract decimal part of odd -> two digits -> take second digit
       const decimalPart = highOdd.toString().split('.')[1];
-      if (!decimalPart || decimalPart.length < 2) {
+      let secondDigit;
+      
+      if (decimalPart && decimalPart.length >= 2) {
+        secondDigit = parseInt(decimalPart[1]);
+      } else {
         // If no decimal part or less than 2 digits, use default calculation
         const calculatedTime = formatTime(hours, minutes, 0);
         const prevTime = formatTime(hours, (minutes - 1 + 60) % 60, 0);
@@ -2999,15 +3038,11 @@
         };
       }
       
-      // Step 2: Get the second digit from decimal part
-      const secondDigit = parseInt(decimalPart[1]);
-      
-      // Step 3: Replace minutes' second digit with odd's second digit
+      // Step 2: Replace minutes' second digit with that odd digit
       const minutesStr = minutes.toString().padStart(2, '0');
-      const firstDigit = parseInt(minutesStr[0]);
-      const newMinutes = parseInt(firstDigit.toString() + secondDigit.toString());
+      const newMinutes = parseInt(minutesStr[0] + secondDigit.toString());
       
-      // Step 4: Check if new time is backward from original time
+      // Step 3: Check if new time is backward from original time
       const originalTimeObj = new Date();
       originalTimeObj.setHours(hours, minutes, 0, 0);
       
@@ -3015,26 +3050,26 @@
       newTimeObj.setHours(hours, newMinutes, 0, 0);
       
       let finalMinutes = newMinutes;
-      let finalHours = hours;
       
-      // If new time is backward from original time, add +1 to minutes' first digit
+      // Step 4: If new time < original time, add +1 to minutes' first digit
       if (newTimeObj < originalTimeObj) {
-        const newFirstDigit = (firstDigit + 1) % 6; // Minutes first digit can be 0-5
-        finalMinutes = parseInt(newFirstDigit.toString() + secondDigit.toString());
+        const firstDigit = Math.floor(newMinutes / 10);
+        const newFirstDigit = (firstDigit + 1) % 6; // Ensure it doesn't exceed 5 (59 minutes)
+        finalMinutes = (newFirstDigit * 10) + (newMinutes % 10);
         
         // Handle minute overflow
         if (finalMinutes >= 60) {
           finalMinutes -= 60;
-          finalHours = (finalHours + 1) % 24;
+          hours = (hours + 1) % 24;
         }
       }
       
-      // Format the final time
-      const calculatedTime = formatTime(finalHours, finalMinutes, 0);
+      // Step 5: Final Signal Time (seconds removed)
+      const calculatedTime = formatTime(hours, finalMinutes, 0);
       
-      // Calculate previous minute for signal window
+      // Step 6: Signal Window (previous minute + final minute)
       let prevMinutes = (finalMinutes - 1 + 60) % 60;
-      let prevHours = finalMinutes === 0 ? (finalHours - 1 + 24) % 24 : finalHours;
+      let prevHours = finalMinutes === 0 ? (hours - 1 + 24) % 24 : hours;
       const prevTime = formatTime(prevHours, prevMinutes, 0);
       
       return {
